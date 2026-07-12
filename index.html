@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاجة مميزة لصحباتي القمر 🩷</title>
+    <style>
+        /* تنسيق الألوان الزاهية (أبيض، بيبي بينك، بيج) */
+        :root {
+            --baby-pink: #ffb7c5;
+            --light-pink: #ffe5ec;
+            --beige: #f9f6f0;
+            --dark-pink: #d47788;
+            --text-color: #4a3b32;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--beige);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(212, 119, 136, 0.15);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            border: 3px solid var(--light-pink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: "🌸 🩷 ✨";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            opacity: 0.5;
+        }
+
+        h1 {
+            color: var(--dark-pink);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        .btn {
+            background-color: var(--baby-pink);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 183, 197, 0.4);
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: var(--dark-pink);
+            transform: translateY(-3px);
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        ol {
+            text-align: right;
+            margin: 20px auto;
+            padding-right: 20px;
+        }
+
+        ol li {
+            font-size: 16px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .input-group {
+            margin: 25px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid var(--baby-pink);
+            border-radius: 12px;
+            outline: none;
+            text-align: center;
+            background-color: var(--beige);
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            border: 4px solid var(--baby-pink);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: popUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .popup-text {
+            font-size: 16px;
+            line-height: 1.7;
+            text-align: right;
+            color: #333;
+            background: var(--beige);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- الصفحة الأولى -->
+    <div id="page1" class="page active">
+        <h1>أهلاً يا صحباتي 🌸</h1>
+        <p>اهلا صحابي انا حنين صاحبتكوا حبيت اعمل حاجه مميزه و موووختلفففه لكل واحده بحبها من صحابي لاني زهقانه 😂😂 الصراحه ده اولا ثانيا انا اكن ليكوا الحب و العشق و اخر حاجه حبيت اعمل حاجه مميزه علشان كل واحده مميزه ف حياتي 
+
+        وحبيت اقولكم طبعا مش هتلاقوا الكلام ده برا اسألوا ودوروا كده مش هتلاقوا حد بيبيع بالسعر ده😂😂💀</p>
+        <button class="btn" onclick="navigateTo('page2')">دوسي هنا ي مزه 💋</button>
+    </div>
+
+    <!-- الصفحة الثانية (التعليمات) -->
+    <div id="page2" class="page">
+        <h1>التعليمات 📋</h1>
+        <ol>
+            <li>دخّلي تاريخ ميلادك هيطلعلك ماسدج مني.</li>
+            <li>ومش مسموح تدخلي تاريخ ميلاد غير مرة واحدة بس علشان محدش يشوف الماسدج للتانية. 🤫</li>
+            <li>علشان انا صايعة وروشة ودماغي شغالة مش بتنام فالماسدج هتفضل ظاهرة ليكي مهما تطلعي وتدخلي من الرابط علشان تفضل ذكرى مني ليكي 🫦🩷🩷😶‍🌫️</li>
+        </ol>
+
+        <div class="input-group" id="inputSection">
+            <select id="day"><option value="">اليوم</option></select>
+            <select id="month">
+                <option value="">الشهر</option>
+                <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+            </select>
+        </div>
+
+        <button class="btn" id="actionBtn" onclick="processBirthday()">دوسي تشوفي رسالتك ✨</button>
+    </div>
+</div>
+
+<div class="popup-overlay" id="popup">
+    <div class="popup-content">
+        <h2 style="color: var(--dark-pink); margin-bottom: 15px;">رسالة مخصصة ليكي 💌</h2>
+        <div class="popup-text" id="popupMessage"></div>
+        <button class="btn" onclick="closePopup()">شكراً يا نيني 🫂</button>
+    </div>
+</div>
+
+<script>
+    // الرابط المباشر والفعّال الخاص بحنين
+    const FORMSPREE_URL = "https://formspree.io/f/xwvdgnww";
+
+    // توليد الأيام تلقائياً في القائمة
+    const daySelect = document.getElementById('day');
+    for (let i = 1; i <= 31; i++) {
+        let opt = document.createElement('option');
+        opt.value = i; opt.innerHTML = i; daySelect.appendChild(opt);
+    }
+
+    function navigateTo(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+    }
+
+    // فحص المتصفح أول ما يفتح اللينك
+    window.onload = function() {
+        let savedDate = localStorage.getItem('userBirthday');
+        let viewCount = parseInt(localStorage.getItem('viewCount') || "0");
+
+        if (savedDate) {
+            viewCount++;
+            localStorage.setItem('viewCount', viewCount);
+            
+            // إرسال التنبيه للإيميل عند إعادة دخول البنت للرابط
+            sendEmailNotification(savedDate, viewCount);
+
+            // توجيهها للتعليمات وقفل الإدخال عنها
+            navigateTo('page2');
+            document.getElementById('inputSection').style.display = 'none';
+            document.getElementById('actionBtn').innerHTML = "إظهار رسالتك المحفوظة 🔒";
+            document.getElementById('actionBtn').setAttribute('onclick', `showSavedMessage('${savedDate}')`);
+        }
+    };
+
+    function processBirthday() {
+        let day = document.getElementById('day').value;
+        let month = document.getElementById('month').value;
+
+        if (!day || !month) {
+            alert("يا مزة دخلي اليوم والشهر الأول! 😂");
+            return;
+        }
+
+        // شفرة نيني السرية لرؤية كل المسجات (اكتبي يوم 31 وشهر 12 ودوسي ع الزرار)
+        if (day == "31" && month == "12") {
+            showAllMessagesForNini();
+            return;
+        }
+
+        let inputDate = `${day}/${month}`;
+        localStorage.setItem('userBirthday', inputDate);
+        localStorage.setItem('viewCount', '1');
+
+        // إرسال الإشعار الفوري الأول لحنين بالإيميل
+        sendEmailNotification(inputDate, 1);
+        showSavedMessage(inputDate);
+
+        // قفل الواجهة على المستخدمة
+        document.getElementById('inputSection').style.display = 'none';
+        document.getElementById('actionBtn').innerHTML = "إظهار رسالتك المحفوظة 🔒";
+        document.getElementById('actionBtn').setAttribute('onclick', `showSavedMessage('${inputDate}')`);
+    }
+
+    function getMessage(dateStr) {
+        if (dateStr === "27/7") {
+            return `الف سلامه عليكي يا ياسو فتره وهتعدي بإذن الله ي قلبي و متكتئبيش خالص الحوار هيتحل كده كده 💋و غير كده يا مزه انتي الحب و العشق ده انا أكن ليكي الحب و العشق 😉😂😆 علشان لو متعرفيش و غير كده خفي يلا علشان اشوفك و متزعليش على اي حاجه كده كده اللي هيروح هييجي الاحسن منه وانتي تستاهلي الاحسن دائما من كل حاجه عموما 🫂يلا بقى يا مزه فوقي من اللي انتي فيه و علشان نشوف وشك القمر و الضحكه اللي بنحبها \n\n نيني اللي تكن ليكي الحب و العشق 😌`;
+        } 
+        else if (dateStr === "22/7") {
+            return `اهلا ايمو احنا مش متكلم كتير الايام دي كتير بس اكن ليكي الحب و العشق 😉 و طبعا عيد ميلادك قرب كل سنه وانتي طيبه وحبيت اعيد عليكي يمكن يكون اول واحده تقولك كل سنه وانتي طيبه 🐢 المهم اني حبيت اقول كلام ليكي هو مش كتير بس ليه معنى اكتر اني بحبك جدا يا قلبي و كل مره بتكلم فيها ف موضوع تافه بقى أو مهم بحب جدا اتناقش معاكي جدا وجهات نظرنا المختلفه ساعات بتبقى حلوه و رايك بيبقى عاجبني بس ساعات الاختلاف ده بيبقى مخليني عايزه احدفك من البلكونه 💀💀و ايامنا الجميله و الصور و التيك توك بتاعتنا اوووووووف ليكي مكانه في قلبي اوووووووووووف من ايام الفراعنه عموما 🫂 الكلام كتير بس الحروف خلصت \n و احب اغنيلك اغنيه بمناسبه السعيده دي \n\n طُلي عندي لما توحشيني\n كلميني لما تنسيني\n سيبتي كل ذكري ويا غيري\n فوقت بس لما سيبتيني\n بعدِك إنتي كل شيء كئيب\n كل ما أمشي بفتكرني بيه\n فيكي مني كل شيء غريب\n زي ليل البرد ما بمشي \n\n توقيعي / نيني اللي تكن ليكي الحب و العشق`;
+        } 
+        else if (dateStr.endsWith("/2")) { // أي يوم في شهر 2
+            return `السلام عليكم ورحمه الله وبركاته حجه بطه 😂😂😂 حبيت اهدي ليكي ماسدج دي ذكرى بقى اننا قد اي نقر و نقير و قد اي بتستفزيني ساعات كتير وعايزه اضربك بس اكن ليكي الحب و العشق 😉 و صحبتنا بحبها علشان بحب استفزك و ارخم عليكي و قد اي انتي حد طيييوب و حبوبه (مع انك بادي ده لناس متستاهلش ساعات كتير بس ماشي هعديها ) و مهما مر الايام وحشه عليكي افتكري أن كل حاجه هتعدي علشان انتي قدها و الصراحه ماسدج منغير مناسبه بس حبيت أقولك كل سنه وانتي طيبه علاشن عيد ميلادك اللي فات 😌🩷و احب اقول تأتي متأخرا خيرا من الا تأتي ابدا و هفاجأك متقلقيش الايام الجايه لما ننزل عموما حبيت انهي ماسدج بتاعتي ب \n\n اكن ليكي الحب و العشق 😆🫂`;
+        } 
+        else {
+            return `أهلاً يا قمر 🌸 نيني بتمسي عليكي وتقولك إنك منورة حياتها، وأكيد أكن ليكي الحب والعشق برضه 😉 مجهزة ليكي مفاجأة تانية لما أشوفك! 🥰`;
+        }
+    }
+
+    function showSavedMessage(dateStr) {
+        document.getElementById('popupMessage').innerText = getMessage(dateStr);
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() { document.getElementById('popup').style.display = 'none'; }
+
+    // لوحة تحكم حنين لمشاهدة جميع الرسائل
+    function showAllMessagesForNini() {
+        let allMsg = `👑 لوحة تحكم نيني السرية:\n\n` +
+                     `📅 تاريخ 27/7 (ياسو):\n ${getMessage('27/7')}\n\n ------------ \n\n` +
+                     `📅 تاريخ 22/7 (إيمو):\n ${getMessage('22/7')}\n\n ------------ \n\n` +
+                     `📅 شهر 2 (بطة):\n ${getMessage('1/2')}`;
+        document.getElementById('popupMessage').innerText = allMsg;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    // دالة الإرسال لـ Formspree
+    function sendEmailNotification(birthday, count) {
+        fetch(FORMSPREE_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                "تاريخ الميلاد المستخدَم": birthday,
+                "عدد مرات رؤية الرسالة": count,
+                "تنبيه من الكود": "في حد دخل يشوف رسالته دلوقتي يا نيني! 👁️"
+            })
+        }).catch(err => console.log("خطأ في الإرسال:", err));
+    }
+</script>
+</body>
+</html>
